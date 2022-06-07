@@ -5,7 +5,6 @@ def floodFill(image, sr, sc, newColor):
         return image
     # change color
     image[sr][sc] = newColor
-    # try / except in case no such square exists
     # set a list of neighboring squares
     neighbors = [(sr - 1, sc), (sr + 1, sc), (sr, sc - 1), (sr, sc + 1)]
     for location in neighbors:
