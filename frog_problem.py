@@ -4,7 +4,7 @@ def frog_problem(n):
     else:
         return 1
 
-# print(frog_problem(11))
+print(frog_problem(11))
 
 
 def frog_bottom_up(n):
