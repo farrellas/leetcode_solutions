@@ -19,3 +19,14 @@ def isAnagram(s, t):
 def isAnagram(s, t):
     return sorted(list(s)) == sorted(list(t))
         
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        sCount = collections.Counter(s)
+        tCount = collections.Counter(t)
+        if len(sCount) != len(tCount):
+            return False
+        for letter in sCount.keys():
+            if letter not in tCount or tCount[letter] != sCount[letter]:
+                return False
+        
+        return True

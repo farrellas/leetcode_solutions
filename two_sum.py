@@ -24,14 +24,12 @@ def twoSum(nums, target):
     return output
 
 
-test1 = [2,7,11,15]
-target1 = 9
-test2 = [3,2,4]
-target2 = 6
 
-print(twoSum(test1, target1))
-print(twoSum(test2, target2))
-print(twoSum([3,3], 6))
-print(twoSum([3,2,3], 6))
-
-
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hashtable = {}
+        for i in range(len(nums)):
+            if target - nums[i] in hashtable:
+                return [hashtable[target-nums[i]], i]
+            else:
+                hashtable[nums[i]] = i
